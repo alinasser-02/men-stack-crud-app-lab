@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit <%= foundFood.name %></title>
+
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+
+</head>
+<body>
+
+      <form action="/foods/<%= foundFood._id %>?_method=PUT" method="POST">
+      <label for="name">Food Name:</label>
+      <input type="text" name="name" id="name" value="<%= foundFood.name %>" />
+
+      <label for="category">Category:</label>
+      <input
+        type="text"
+        name="category"
+        id="category"
+        placeholder="e.g. Medical, IT Services"
+        value="<%= foundFood.category %>"
+      />
+
+      <label for="description">Description:</label>
+      <textarea name="description" id="description" rows="4" ><%= foundFood.description %></textarea>
+
+      <label for="image">Image URL:</label>
+      <img src="<%=foundFood.image%>">
+
+      <button type="submit">Save changes</button>
+    </form>
+
+</body>
+</html>

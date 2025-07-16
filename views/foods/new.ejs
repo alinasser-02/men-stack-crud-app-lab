@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+
+
+  <title>Add a new food</title>
+</head>
+<body>
+  <h1>Add a New Food </h1>
+  <a href="/foods/">
+      Back to Food
+    </a>
+    <form action="/foods" method="POST">
+      <label for="name">Food Name:</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="category">Category:</label>
+      <input
+        type="text"
+        name="category"
+        id="category"
+        placeholder="Pasta, Pizza, Sambosa..etc"
+        required
+      />
+
+      <label for="description">Description:</label>
+      <textarea name="description" id="description" rows="3" required></textarea>
+
+       <label for="image">Image URL:</label>
+        <input type="text" name="image" id="image" />
+
+      <button type="submit">Add Food</button>
+    </form>
+</body>
+</html>

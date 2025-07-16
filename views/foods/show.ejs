@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+
+    <title>Food Page</title>
+  </head>
+  <body>
+    		<h1><%= foundFood.name %></h1>
+
+		<p><strong>Category:</strong> <%= foundFood.category %></p>
+
+		<p><strong>Description:</strong></p>
+		<p><%= foundFood.description %></p>
+
+		<p><strong>Image:</strong> <img src="<%=foundFood.image%>">
+
+    <div class="actions">
+      
+<form class="delete-form" action="/foods/<%= foundFood._id %>?_method=DELETE" method="POST">
+
+  <button type="submit">Delete <%= foundFood.name %></button>
+</form>
+    <a class="edit-link" href="/foods/<%= foundFood._id %>/edit">
+        <div class="edit-text">Edit(UPDATE) <%= foundFood.name %></div>
+    </a>
+    </div>
+       <a href="/foods">
+      <div class="back">Back to All Foods</div>
+    </a>
+</body>
+</html>
